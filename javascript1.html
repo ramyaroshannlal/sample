@@ -7,6 +7,7 @@
     <body>
         <h1>Creating javascript objects</h1>
         <h1><p id="demo"></p></h1>
+        <button id="click">Click me!</button>
     <script>
         var student = {
             name : "ramya",
@@ -14,6 +15,16 @@
             studies : "computer"
         };
         document.getElementById('demo').innerHTML =student.name + "of student" + student.age + "with age" + student.studies;
+    let user = {
+        name: "ranya",
+        age: 24,
+    };
+    function sayHi(){
+        alert("Hai");
+    }
+    user.message = sayHi;
+    document.getElementById("demo").innerHTML = "Hi" +user.name ;
+    document.getElementById("click").onclick = user.message;
     </script>
     
     </body>
